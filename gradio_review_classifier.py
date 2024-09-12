@@ -13,7 +13,7 @@ import gradio as gr
 import seaborn as sns
 import matplotlib.pyplot as plt
 
-# قائمة المراجعات والتقييمات
+# List of reviews and ratings
 reviews_data = [
     {"review": "The food was amazing and the service was excellent!", "rating": 5},
     {"review": "It was okay, not the best experience but not bad.", "rating": 3},
@@ -24,15 +24,15 @@ reviews_data = [
     {"review": "The service was poor, but the food was decent.", "rating": 2}
 ]
 
-# تصنيف المراجعة بناءً على التقييم مباشرة
+# Classify the review directly based on the rating
 def classify_review(user_review):
     for review_data in reviews_data:
-        if user_review.lower() in review_data["review"].lower():  # لا حاجة للتطابق الكامل، مجرد احتواء النص
+        if user_review.lower() in review_data["review"].lower():  # No need for exact match, just containment
             rating = review_data["rating"]
             return "Positive" if rating >= 4 else "Negative"
     return "Review not found."
 
-# رسم توزيع التقييمات
+# Plot the distribution of ratings
 def plot_rating_distribution():
     ratings = [review["rating"] for review in reviews_data]
     plt.figure(figsize=(6, 4))
@@ -43,7 +43,7 @@ def plot_rating_distribution():
     plt.tight_layout()
     return plt.gcf()
 
-# واجهة Gradio لتصنيف المراجعة
+# Gradio interface for review classification
 review_interface = gr.Interface(
     fn=classify_review,
     inputs=gr.Textbox(lines=2, placeholder="Enter your review here", label="Review"),
@@ -52,7 +52,7 @@ review_interface = gr.Interface(
     description="Enter a review to classify it as positive or negative based on the rating."
 )
 
-# واجهة Gradio لرسم توزيع التقييمات
+# Gradio interface to plot the distribution of ratings
 plot_interface = gr.Interface(
     fn=plot_rating_distribution,
     inputs=[],
@@ -61,8 +61,8 @@ plot_interface = gr.Interface(
     description="Shows the distribution of ratings in the dataset."
 )
 
-# دمج الواجهتين باستخدام تبويبات
+# Combine the two interfaces using tabs
 tabbed_interface = gr.TabbedInterface([review_interface, plot_interface], ["Review Classifier", "Rating Distribution"])
 
-# إطلاق الواجهات
+# Launch the interfaces
 tabbed_interface.launch()
