@@ -40,7 +40,8 @@ This project demonstrates the integration of Hugging Face's sentiment analysis m
    python full_review_sentiment_analysis.py
    ```
 
-4. Open the URL provided by Gradio in your browser to interact with the interface.
+4. Link to the Hugging Face Space: [Sentiment Analysis of Restaurant Reviews](https://huggingface.co/spaces/Almahfouz/Sentiment-Analysis-of-Restaurant-Reviews-Using-Hugging-Face-and-Gradio)
+
 
 ## Usage:
 - **Submit a review**: Enter a restaurant review in the Gradio interface. The system will provide:
