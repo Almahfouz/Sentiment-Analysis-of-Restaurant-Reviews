@@ -9,16 +9,17 @@ Original file is located at
 
 from transformers import pipeline
 
-# تحميل النموذج
+# Load the model
 classifier = pipeline('sentiment-analysis', model='distilbert-base-uncased-finetuned-sst-2-english')
 
-# نص تجريبي لتحليل المشاعر
+# Sample text for sentiment analysis
 text = "The restaurant was amazing and the food was delicious."
 text_2 = "We were late and had a bad experience"
 
-# تطبيق النموذج
+# Apply the model
 result = classifier(text)
 result_2 = classifier(text_2)
-# عرض النتيجة
+
+# Display the result
 print(result)
 print(result_2)
