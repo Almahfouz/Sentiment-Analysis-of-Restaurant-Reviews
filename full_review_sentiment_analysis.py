@@ -29,13 +29,13 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 from fuzzywuzzy import fuzz
 
-# تحميل البيانات
+# Load the dataset
 reviews_df = pd.read_csv('Restaurant_reviews.csv')
 
-# تحميل نموذج التصنيف العاطفي
+# Load the sentiment analysis model
 sentiment_model = pipeline("sentiment-analysis", model="distilbert-base-uncased-finetuned-sst-2-english")
 
-# وظيفة لتصنيف المراجعة
+# Function to classify a review
 def classify_review(user_review):
     try:
         if not user_review.strip():
@@ -44,19 +44,23 @@ def classify_review(user_review):
         best_match = None
         best_score = 0
 
+        # Iterate through each review in the dataset
         for _, row in reviews_df.iterrows():
             if pd.isna(row['Review']):
                 continue
 
+            # Fuzzy matching between the user review and dataset reviews
             score = fuzz.token_sort_ratio(user_review.lower(), str(row['Review']).lower())
             if score > best_score:
                 best_score = score
                 best_match = row
 
+        # If a good match is found (score > 80%)
         if best_score > 80:
             rating = best_match['Rating']
             rating_based_classification = f"Positive review based on rating: {rating}" if int(rating) >= 4 else f"Negative review based on rating: {rating}"
 
+            # Sentiment analysis on the user's review
             sentiment_result = sentiment_model(user_review)[0]
             sentiment = sentiment_result['label']
             confidence = sentiment_result['score']
@@ -69,7 +73,7 @@ def classify_review(user_review):
     except Exception as e:
         return f"An error occurred: {str(e)}"
 
-# وظيفة لرسم توزيع التقييمات
+# Function to plot the distribution of ratings
 def plot_rating_distribution():
     plt.figure(figsize=(8, 6))
     sns.countplot(x='Rating', data=reviews_df, order=[1, 2, 3, 4, 5])
@@ -79,7 +83,7 @@ def plot_rating_distribution():
     plt.tight_layout()
     return plt.gcf()
 
-# إنشاء واجهات Gradio
+# Create Gradio interfaces
 review_interface = gr.Interface(
     fn=classify_review,
     inputs=gr.Textbox(lines=2, placeholder="Enter your review here", label="Reviews"),
@@ -96,8 +100,8 @@ plot_interface = gr.Interface(
     description="Shows the distribution of ratings in the dataset."
 )
 
-# دمج الواجهتين باستخدام تبويبات
+# Combine the two interfaces using tabs
 tabbed_interface = gr.TabbedInterface([review_interface, plot_interface], ["Review Classifier", "Rating Distribution"])
 
-# إطلاق الواجهات
+# Launch the interfaces
 tabbed_interface.launch()
