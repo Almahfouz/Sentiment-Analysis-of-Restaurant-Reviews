@@ -1,4 +1,4 @@
-# Sentiment-Analysis-of-Restaurant-Reviews-Using-Hugging-Face-and-Gradio
+# Sentiment-Analysis-of-Restaurant-Reviews
 
 This project demonstrates the integration of Hugging Face's sentiment analysis models with Gradio to classify restaurant reviews and visualize review ratings. Users can submit a restaurant review and receive a predicted rating, a classification of the review's sentiment (positive or negative), and an accuracy score.
 
