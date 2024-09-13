@@ -1,63 +1,60 @@
 # Sentiment-Analysis-of-Restaurant-Reviews
 
-This project demonstrates the integration of Hugging Face's sentiment analysis models with Gradio to classify restaurant reviews and visualize review ratings. Users can submit a restaurant review and receive a predicted rating, a classification of the review's sentiment (positive or negative), and an accuracy score.
+## Project Purpose
+This project focuses on classifying restaurant reviews by combining a fuzzy matching technique with a dataset of reviews and using Hugging Face's sentiment analysis model (distilbert-base-uncased-finetuned-sst-2-english). The application has two main features:
+- *Review Classification*: It compares the user's review with existing reviews in the dataset and uses a sentiment analysis model to determine the sentiment.
+- *Rating Distribution Visualization*: Displays the distribution of ratings from the dataset.
 
-## Key Features:
-- **Sentiment Classification**: Classifies reviews as positive or negative using a Hugging Face model (`distilbert-base-uncased-finetuned-sst-2-english`).
-- **Rating Prediction**: Predicts the rating based on fuzzy matching with pre-existing review data.
-- **Review Search**: Uses fuzzy matching to find the best matching review from the dataset.
-- **Rating Distribution**: Visualizes the distribution of ratings in the dataset.
+## Main Files
+- **Restaurant_reviews.csv**: This file contains the restaurant reviews and corresponding ratings.
+- **full_review_sentiment_analysis.py**: This Python script integrates fuzzy matching and sentiment analysis using Gradio for interactive review classification and plotting rating distribution.
+- **gradio_review_classifier.py**: This Python file focuses on building a simple Gradio interface for classifying reviews and displaying a plot of rating distribution.
+- **basic_sentiment_analysis.py**: This Python file demonstrates a basic example of sentiment analysis using the Hugging Face model.
 
-## Components:
-- **`basic_sentiment_analysis.ipynb`**: Demonstrates basic sentiment analysis using a Hugging Face pipeline on two sample reviews.
-- **`gradio_review_classifier.ipynb`**: Implements a simple Gradio interface with hardcoded reviews and their ratings.
-- **`full_review_sentiment_analysis.ipynb`**: Full implementation with Gradio integration, performing both sentiment analysis and review classification using the dataset.
-- **`Restaurant_reviews.csv`**: The dataset containing restaurant reviews and ratings.
+## How Hugging Face's Sentiment Analysis Works
+The project utilizes Hugging Face’s pipeline API to perform sentiment analysis. It uses the distilbert-base-uncased-finetuned-sst-2-english model to classify text as either positive or negative.
 
-### How to Run:
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Almahfouz/Sentiment-Analysis-of-Restaurant-Reviews
-   ```
-   After running this command navigate the folder that you have save the repository at, then run **full_review_sentiment_analysis.py** file
-
-4. Link to the Hugging Face Space: [Sentiment Analysis of Restaurant Reviews](https://huggingface.co/spaces/Almahfouz/Sentiment-Analysis-of-Restaurant-Reviews-Using-Hugging-Face-and-Gradio)
+python
+classifier = pipeline('sentiment-analysis', model='distilbert-base-uncased-finetuned-sst-2-english')
 
 
-## Usage:
-- **Submit a review**: Enter a restaurant review in the Gradio interface. The system will provide:
-  - A predicted rating based on fuzzy matching with existing reviews.
-  - Sentiment classification (positive/negative) using Hugging Face.
-  - Confidence score for the sentiment analysis.
-
-- **Rating distribution**: The app also shows a visual distribution of the ratings from the dataset.
-
-## Expected Outputs:
-- When a user submits a review, the Gradio interface returns:
-  - **Predicted Rating**: 1 to 5 based on review match.
-  - **Sentiment Classification**: Positive or negative sentiment prediction.
-  - **Confidence Score**: Accuracy of the model's sentiment prediction.
-  - **Rating Plot**: A plot showing the distribution of ratings across all reviews in the dataset.
+For example:
+python
+result = classifier("The food was great!")
 
 
-## Dataset:
-- **Restaurant_reviews.csv**: The dataset used in this project contains the following columns:
-  - **Restaurant**: Name of the restaurant.
-  - **Reviewer**: Name of the reviewer.
-  - **Review**: Text of the review.
-  - **Rating**: Rating given by the reviewer (1-5).
-  - **Metadata**: Additional details like the number of reviews and followers.
-  - **Time**: Date and time of the review.
-  - **Pictures**: Number of pictures associated with the review.
+This would return a sentiment classification with a confidence score.
 
-## Video Walkthrough:
-[Link to the video walkthrough] – A 3-5 minute video showing how the project works and a detailed walkthrough of the Gradio interface.
+## Running the Code
 
----
+1. *Clone the Repository:*
+   bash
+   git clone <https://github.com/faisalaldwaish/Sentiment-Analysis-of-Restaurant-Reviews/tree/main>
+   
+   
+   
+ After running this command navigate the folder that you have save the repository at, then run full_review_sentiment_analysis.py file
 
-### License:
-This project is licensed under the MIT License - see the LICENSE file for details.
+## Expected Output
 
-### Author:
-Created by Abdullah, and Faisal (GitHub: [Almahfouz](https://github.com/Almahfouz))
+### Review Classifier
+Input a review, and the classifier will return:
+- A rating-based classification from the dataset.
+- A sentiment analysis result from the Hugging Face model.
+  
+For example:
 
+Positive review based on rating: 5
+Model prediction: POSITIVE with confidence: 0.98
+Matching Score: 90%
+
+
+### Rating Distribution
+<img src="https://github.com/user-attachments/assets/33d4a290-f0af-4a68-be80-4dfb06a842db" alt="Rating plot" width="500"/>
+
+## Hugging Face Project Page
+
+- [Hugging Face Project](https://huggingface.co/spaces/Faisalaldwaish1/Sentiment-Analysis-of-Restaurant-Reviews)
+
+## Video 
+link video
