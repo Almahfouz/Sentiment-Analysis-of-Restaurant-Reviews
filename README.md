@@ -14,15 +14,6 @@ This project demonstrates the integration of Hugging Face's sentiment analysis m
 - **`full_review_sentiment_analysis.ipynb`**: Full implementation with Gradio integration, performing both sentiment analysis and review classification using the dataset.
 - **`Restaurant_reviews.csv`**: The dataset containing restaurant reviews and ratings.
 
-## Installation
-
-### Requirements:
-- Python 3.x
-- Install dependencies:
-  ```bash
-  pip install -r requirements.txt
-  ```
-
 ### How to Run:
 1. Clone the repository:
    ```bash
