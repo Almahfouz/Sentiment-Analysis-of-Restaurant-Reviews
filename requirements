@@ -1,6 +1,0 @@
-transformers
-gradio
-fuzzywuzzy[speedup]
-pandas
-seaborn
-matplotlib
