@@ -1,9 +1,9 @@
 # Sentiment-Analysis-of-Restaurant-Reviews
 
+
+
 ## Project Purpose
-This project focuses on classifying restaurant reviews by combining a fuzzy matching technique with a dataset of reviews and using Hugging Face's sentiment analysis model (distilbert-base-uncased-finetuned-sst-2-english). The application has two main features:
-- *Review Classification*: It compares the user's review with existing reviews in the dataset and uses a sentiment analysis model to determine the sentiment.
-- *Rating Distribution Visualization*: Displays the distribution of ratings from the dataset.
+This project demonstrates the integration of Hugging Face's sentiment analysis models with Gradio to classify restaurant reviews and visualize review ratings. Users can submit a restaurant review and receive a predicted rating, a classification of the review's sentiment (positive or negative), and an accuracy score.
 
 ## Main Files
 - **Restaurant_reviews.csv**: This file contains the restaurant reviews and corresponding ratings.
@@ -12,28 +12,27 @@ This project focuses on classifying restaurant reviews by combining a fuzzy matc
 - **basic_sentiment_analysis.py**: This Python file demonstrates a basic example of sentiment analysis using the Hugging Face model.
 
 ## How Hugging Face's Sentiment Analysis Works
-The project utilizes Hugging Face’s pipeline API to perform sentiment analysis. It uses the distilbert-base-uncased-finetuned-sst-2-english model to classify text as either positive or negative.
+The project utilizes Hugging Face’s pipeline API to perform sentiment analysis. It uses the (`distilbert-base-uncased-finetuned-sst-2-english`) model to classify text as either positive or negative.
 
 python
+```bash
 classifier = pipeline('sentiment-analysis', model='distilbert-base-uncased-finetuned-sst-2-english')
-
+```
 
 For example:
 python
+```bash
 result = classifier("The food was great!")
-
+```
 
 This would return a sentiment classification with a confidence score.
 
-## Running the Code
-
-1. *Clone the Repository:*
-   bash
-   git clone <https://github.com/faisalaldwaish/Sentiment-Analysis-of-Restaurant-Reviews/tree/main>
-   
-   
-   
- After running this command navigate the folder that you have save the repository at, then run full_review_sentiment_analysis.py file
+## How to Run:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/Almahfouz/Sentiment-Analysis-of-Restaurant-Reviews
+   ```
+   After running this command navigate the folder that you have save the repository at, then run *full_review_sentiment_analysis.py* file
 
 ## Expected Output
 
@@ -42,19 +41,16 @@ Input a review, and the classifier will return:
 - A rating-based classification from the dataset.
 - A sentiment analysis result from the Hugging Face model.
   
-For example:
-
-Positive review based on rating: 5
-Model prediction: POSITIVE with confidence: 0.98
-Matching Score: 90%
+As shown in the figure below:
+![image](https://github.com/user-attachments/assets/44eee318-99a2-4a6f-8406-3d2d7a2d0e95)
 
 
 ### Rating Distribution
-<img src="https://github.com/user-attachments/assets/33d4a290-f0af-4a68-be80-4dfb06a842db" alt="Rating plot" width="500"/>
+<img src= "https://github.com/user-attachments/assets/14aaf0ac-2ec3-438a-9a98-1bd9d5ab9960" alt="Rating plot" width="600"/>
 
 ## Hugging Face Project Page
 
-- [Hugging Face Project](https://huggingface.co/spaces/Faisalaldwaish1/Sentiment-Analysis-of-Restaurant-Reviews)
+- [Hugging Face Project](https://huggingface.co/spaces/Almahfouz/Sentiment-Analysis-of-Restaurant-Reviews-Using-Hugging-Face-and-Gradio)
 
 ## Video 
 link video
