@@ -26,8 +26,8 @@ This project demonstrates the integration of Hugging Face's sentiment analysis m
 ### How to Run:
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Almahfouz/Sentiment-Analysis-of-Restaurant-Reviews-Using-Hugging-Face-and-Gradio.git
-   cd Sentiment-Analysis-of-Restaurant-Reviews-Using-Hugging-Face-and-Gradio
+   git clone https://github.com/Almahfouz/Sentiment-Analysis-of-Restaurant-Reviews
+   cd Sentiment-Analysis-of-Restaurant-Reviews
    ```
 
 2. Install required libraries:
