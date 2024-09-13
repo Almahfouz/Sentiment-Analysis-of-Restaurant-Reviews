@@ -7,7 +7,7 @@ Original file is located at
     https://colab.research.google.com/drive/1t6n96oiHrBihDv71xcIejuYObUDpFYuM
 """
 
-!pip install transformers gradio
+pip install transformers gradio
 
 pip install fuzzywuzzy[speedup]
 
