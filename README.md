@@ -9,9 +9,9 @@ This project demonstrates the integration of Hugging Face's sentiment analysis m
 - **Rating Distribution**: Visualizes the distribution of ratings in the dataset.
 
 ## Components:
-- **`basic_sentiment_analysis.py`**: Demonstrates basic sentiment analysis using a Hugging Face pipeline on two sample reviews.
-- **`gradio_review_classifier.py`**: Implements a simple Gradio interface with hardcoded reviews and their ratings.
-- **`full_review_sentiment_analysis.py`**: Full implementation with Gradio integration, performing both sentiment analysis and review classification using the dataset.
+- **`basic_sentiment_analysis.ipynb`**: Demonstrates basic sentiment analysis using a Hugging Face pipeline on two sample reviews.
+- **`gradio_review_classifier.ipynb`**: Implements a simple Gradio interface with hardcoded reviews and their ratings.
+- **`full_review_sentiment_analysis.ipynb`**: Full implementation with Gradio integration, performing both sentiment analysis and review classification using the dataset.
 - **`Restaurant_reviews.csv`**: The dataset containing restaurant reviews and ratings.
 
 ## Installation
