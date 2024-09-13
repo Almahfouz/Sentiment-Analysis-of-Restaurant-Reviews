@@ -27,18 +27,8 @@ This project demonstrates the integration of Hugging Face's sentiment analysis m
 1. Clone the repository:
    ```bash
    git clone https://github.com/Almahfouz/Sentiment-Analysis-of-Restaurant-Reviews
-   cd Sentiment-Analysis-of-Restaurant-Reviews
    ```
-
-2. Install required libraries:
-   ```bash
-   pip install -r requirements.txt
-   ```
-
-3. Run the full implementation with Gradio:
-   ```bash
-   python full_review_sentiment_analysis.py
-   ```
+   After running this command navigate the folder that you have save the repository at, then run **full_review_sentiment_analysis.py** file
 
 4. Link to the Hugging Face Space: [Sentiment Analysis of Restaurant Reviews](https://huggingface.co/spaces/Almahfouz/Sentiment-Analysis-of-Restaurant-Reviews-Using-Hugging-Face-and-Gradio)
 
@@ -56,6 +46,8 @@ This project demonstrates the integration of Hugging Face's sentiment analysis m
   - **Predicted Rating**: 1 to 5 based on review match.
   - **Sentiment Classification**: Positive or negative sentiment prediction.
   - **Confidence Score**: Accuracy of the model's sentiment prediction.
+  - **Rating Plot**: A plot showing the distribution of ratings across all reviews in the dataset.
+
 
 ## Dataset:
 - **Restaurant_reviews.csv**: The dataset used in this project contains the following columns:
