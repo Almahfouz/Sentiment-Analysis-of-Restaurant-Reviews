@@ -53,4 +53,4 @@ As shown in the figure below:
 - [Hugging Face Project](https://huggingface.co/spaces/Almahfouz/Sentiment-Analysis-of-Restaurant-Reviews-Using-Hugging-Face-and-Gradio)
 
 ## Video 
-link video
+link video: https://drive.google.com/file/d/1-YvZywKkpaPLN-N_9t55i86-GrWdBSrO/view?usp=sharing
