@@ -42,11 +42,16 @@ Input a review, and the classifier will return:
 - A sentiment analysis result from the Hugging Face model.
   
 As shown in the figure below:
-![image](https://github.com/user-attachments/assets/44eee318-99a2-4a6f-8406-3d2d7a2d0e95)
+![image](https://github.com/user-attachments/assets/1ae9378e-b818-420a-bdfb-f964700c77f2)
 
 
 ### Rating Distribution
-<img src= "https://github.com/user-attachments/assets/14aaf0ac-2ec3-438a-9a98-1bd9d5ab9960" alt="Rating plot" width="600"/>
+![image](https://github.com/user-attachments/assets/b99b659c-82d0-4be3-af6b-102e8be43994)
+
+
+### Dataset Preview
+![image](https://github.com/user-attachments/assets/a0258d71-ce5d-4538-9bf6-cc51ae78fa84)
+
 
 ## Hugging Face Project Page
 
