@@ -53,4 +53,7 @@ As shown in the figure below:
 - [Hugging Face Project](https://huggingface.co/spaces/Almahfouz/Sentiment-Analysis-of-Restaurant-Reviews-Using-Hugging-Face-and-Gradio)
 
 ## Video 
-link video: https://drive.google.com/file/d/1-YvZywKkpaPLN-N_9t55i86-GrWdBSrO/view?usp=sharing
+link video: -[Drive](https://drive.google.com/file/d/1-YvZywKkpaPLN-N_9t55i86-GrWdBSrO/view?usp=sharing)
+
+## Dataset Link
+-[Kaggle](https://www.kaggle.com/datasets/joebeachcapital/restaurant-reviews)
